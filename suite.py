@@ -22,48 +22,48 @@ q = int(q)
 if q>-1 and q<1:
  print("la raison étant comprise entre -1 et 1 alors la suite est convergente vers 0")
  x = int(input("A quelle precision voulez vous que le resultat en rapport avec le terme U(n) soit? 10^"))
- if x<0:
+ if x<=0:
   x = x
  else:
-   x = -x
-   '''partie debugage entrée utilisateur'''
+  x = -x
+  '''partie debugage entrée utilisateur'''
  n = 0
  s = 100000000000000000000000000000000
  while s<-pow(10,x) or s>pow(10,x):
   n += 1
   s = u*pow(q,n-i)
   '''n=le rang a partir duquelle s est proche a 10^-n de 0'''
- n = n+1-i
+ n = n-i
  print("n=",n)
 elif (q>1 and u>0) or (q<1 and u<0):
  print("la raison étant comprise entre [1;+infini] alors la suite est divergente vers +infini")
  x = int(input("A quelle precision voulez vous que le resultat en rapport avec le terme U(n) soit? 10^"))
- if x>0:
+ if x>=0:
   x = x
  else:
-   x = -x
-   '''partie debugage entrée utilisateur'''
+  x = -x
+  '''partie debugage entrée utilisateur'''
  n = 0
  s = 0
  while s<pow(10,x):
   n += 1
   s = u*pow(q,n-i)
   '''n=le rang a partir duquelle s est proche a 10^-n de 0'''
- n = n+1-i
+ n = n-i
  print("n=",n)
 elif (q<1 and u>0) or (q>1 and u<0):
  print("la raison étant comprise entre [-infini;-1] alors la suite est divergente vers -infini")
  x = int(input("A quelle precision voulez vous que le resultat en rapport avec le terme U(n) soit? 10^"))
- if x>0:
+ if x>=0:
   x = x
  else:
-   x = -x
-   '''partie debugage entrée utilisateur'''
+  x = -x
+  '''partie debugage entrée utilisateur'''
  n = 0
  s = 0
  while s>-pow(10,x):
   n += 1
   s = u*pow(q,n-i)
   '''n=le rang a partir duquelle s est proche a 10^-n de 0'''
- n = n+1-i
+ n = n-i
 print("n=",n)
