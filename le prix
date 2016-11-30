@@ -1,0 +1,12 @@
+x = 0
+y = 0
+z = 0
+print("Quel est le prix sans taxes ?")
+x = float(input())
+y = x/100
+z = x + 9.5*y
+print("Le prix est ", z ,"Euro")
+if z > 120
+  print("Commande passee")
+ else:
+  print(C'est beaucoup trop cher")
